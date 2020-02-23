@@ -5,7 +5,7 @@ import scrapy
 class DoubanMoviesSpider(scrapy.Spider):
     name = 'douban_movies'
     allowed_domains = ['movie.douban.com']
-    start_urls = ['http://movie.douban.com/']
+    start_urls = ['https://movie.douban.com']
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.131 Safari/537.36"
     }

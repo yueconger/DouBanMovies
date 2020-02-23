@@ -6,6 +6,8 @@
 # https://doc.scrapy.org/en/latest/topics/spider-middleware.html
 
 from scrapy import signals
+import time
+import random
 
 
 class DoubanmoviesSpiderMiddleware(object):
@@ -78,6 +80,7 @@ class DoubanmoviesDownloaderMiddleware(object):
         # - or return a Request object
         # - or raise IgnoreRequest: process_exception() methods of
         #   installed downloader middleware will be called
+        time.sleep(random.random() * 50)
         return None
 
     def process_response(self, request, response, spider):
